@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This is the bsae model for AirBnB"""
+"""This is the base model for AirBnB"""
 import uuid
 from datetime import datetime
 
@@ -10,10 +10,11 @@ class BaseModel:
 
     def __init__(self, *args, **kwargs):
         """Instantiation of base model class
+        args: wont be used
         Attributes:
-        id: unique id generated
-        created_at: creation date
-        updated_at: updated date"""
+            id: unique id generated
+            created_at: creation date
+            updated_at: updated date"""
 
         if kwargs:
             for key, value in kwargs.items():
