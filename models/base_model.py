@@ -33,12 +33,12 @@ class BaseModel:
             self.created_at = datetime.now()
 
     def __str__(self):
-        """method that return a string 
+        """method that return a string
         of class name, id and dictionary"""
-        return f"[{self.__name__}] ({self.id}) {self.__dict__}"
+        return f"[{self.__class__.__name__}] ({self.id}) {self.__dict__}"
 
     def save(self):
-        """method that updates the attribute updated_at 
+        """method that updates the attribute updated_at
         with current datetime"""
         self.updated_at = datetime.now()
 
