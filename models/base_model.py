@@ -2,6 +2,7 @@
 """This is the base model for AirBnB"""
 import uuid
 from datetime import datetime
+import models
 
 
 class BaseModel:
@@ -42,6 +43,8 @@ class BaseModel:
         """method that updates the attribute updated_at
         with current datetime"""
         self.updated_at = datetime.now()
+        models.storage.new(self)
+        models.storage.save()
 
     def to_dict(self):
         """creates a dictionary of the class and returns it
