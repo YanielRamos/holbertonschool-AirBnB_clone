@@ -29,15 +29,19 @@ class FileStorage:
         for key, value in self.__objects.items():
             my_dict[key] = value.to_dict()
         with open(self.__file_path, 'w') as file:
-            json.dumps(my_dict, file)
+            json.dump(my_dict, file)
 
     def reload(self):
         """deserializes the JSON file to __objects if
         __file_path exist"""
         try:
             with open(self.__file_path, 'r') as file:
-                for key, value in (json.loads(file)).items():
-                    value = eval(value["__class__"])(**value)
-                    self.__objects[key] = value
+                data = file.read()
+                if data:
+                    my_dict = json.loads(data)
+                    for key, value in my_dict.items():
+                        class_name = value["__class__"]
+                        obj = eval(class_name)(**value)
+                        self.__objects[key] = obj
         except FileNotFoundError:
             pass
