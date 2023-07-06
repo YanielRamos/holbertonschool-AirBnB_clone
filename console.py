@@ -10,14 +10,12 @@ import sys
 from models import storage
 from models.base_model import BaseModel
 
+
 # Dictionary of classes available
 All_Classes = {"BaseModel": BaseModel}
 
-"""
-Creating class HBNBCommand
-"""
 
-
+# Creating class HBNBCommand
 class HBNBCommand(cmd.Cmd):
 
     # sets custom prompt for the console.
