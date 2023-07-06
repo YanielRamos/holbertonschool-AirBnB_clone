@@ -35,11 +35,13 @@ class HBNBCommand(cmd.Cmd):
             # If 'quit' is exectued, the loop ends
         return True
 
+    # Command 'EOF' exit program
     def do_EOF(self, args):
         """Exit the progaram"""
         # Exits the same way 'quit' does
         return self.do_quit(args)
 
+    # if line is empty, do nothing
     def emptyline(self):
         """Do nothing when an empty line is entered"""
         # If newline is empty do nothing
