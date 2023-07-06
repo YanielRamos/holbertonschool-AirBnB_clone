@@ -27,7 +27,7 @@ class HBNBCommand(cmd.Cmd):
         self.All_Classes = {"BaseModel": BaseModel}
 
     # Command 'quit' exit the program
-    def _quit(self, arg):
+    def do_quit(self, args):
         """
         Exit the program
         """
@@ -38,12 +38,12 @@ class HBNBCommand(cmd.Cmd):
             # If 'quit' is exectued, the loop ends
         return True
 
-    def _EOF(self, arg):
+    def do_EOF(self, args):
         """
         Exit the progaram
         """
         # Exits the same way 'quit' does
-        return self._quit(args)
+        return self.do_quit(args)
 
     def emptyline(self):
         """
