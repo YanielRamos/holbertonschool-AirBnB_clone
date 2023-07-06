@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """Entry point module of the Command
 interpreter
 """
@@ -19,9 +19,7 @@ Creating class HBNBCommand
 
 
 class HBNBCommand(cmd.Cmd):
-    """
-    Class of HBNBCommand
-    """
+
     # sets custom prompt for the console.
     prompt = '(hbnb) '
 
