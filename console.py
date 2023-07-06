@@ -53,7 +53,7 @@ class HBNBCommand(cmd.Cmd):
         """
         Do nothing when an empty line is entered
         """
-        # If empty line do nothing
+        # If newline is empty do nothing
         pass
 
 
