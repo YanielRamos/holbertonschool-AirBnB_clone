@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """This is the base model for AirBnB"""
+
 import uuid
 from datetime import datetime
-import models
 
 
 class BaseModel:
@@ -32,19 +32,19 @@ class BaseModel:
             storage.new(self)
 
     def __str__(self):
-        """method that return a string
+        """Method that return a string
         of class name, id and dictionary"""
         return f"[{self.__class__.__name__}] ({self.id}) {self.__dict__}"
 
     def save(self):
-        """method that updates the attribute updated_at
+        """Method that updates the attribute updated_at
         with current datetime"""
         self.updated_at = datetime.now()
         from models import storage
         storage.save()
 
     def to_dict(self):
-        """creates a dictionary of the class and returns it
+        """Creates a dictionary of the class and returns it
         with all key values of __dict__"""
 
         # Makes a copy of __dict__
