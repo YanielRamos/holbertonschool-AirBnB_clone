@@ -48,7 +48,7 @@ class BaseModel:
         with all key values of __dict__"""
 
         # Makes a copy of __dict__
-        my_dict = dict(self.__dict__.copy)
+        my_dict = self.__dict__.copy()
 
         # Adds class to the dictionary
         my_dict["__class__"] = self.__class__.__name__
