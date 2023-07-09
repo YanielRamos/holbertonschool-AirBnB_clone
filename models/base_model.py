@@ -17,22 +17,19 @@ class BaseModel:
             created_at: creation date
             updated_at: updated date"""
 
+        self.id = str(uuid.uuid4())
+        self.created_at = datetime.now()
+        self.updated_at = self.created_at
+
         if kwargs:
             for key, value in kwargs.items():
                 if key == "created_at" or key == "updated_at":
                     value = datetime.strptime(value, "%Y-%m-%dT%H:%M:%S.%f")
                 if key != "__class__":
                     setattr(self, key, value)
-            if "id" not in kwargs:
-                self.id = str(uuid.uuid4())
-            if "created_at" not in kwargs:
-                self.created_at = datetime.now()
-            if "updated_at" not in kwargs:
-                self.updated_at = datetime.now()
         else:
-            self.id = str(uuid.uuid4())
-            self.created_at = datetime.now()
-            self.updated_at = datetime.now()
+            from models import storage
+            storage.new(self)
 
     def __str__(self):
         """method that return a string
@@ -43,15 +40,20 @@ class BaseModel:
         """method that updates the attribute updated_at
         with current datetime"""
         self.updated_at = datetime.now()
-        models.storage.new(self)
-        models.storage.save()
+        from models import storage
+        storage.save()
 
     def to_dict(self):
         """creates a dictionary of the class and returns it
         with all key values of __dict__"""
 
-        my_dict = dict(self.__dict__)
-        my_dict["__class__"] = str(type(self).__class__.__name__)
+        # Makes a copy of __dict__
+        my_dict = dict(self.__dict__.copy)
+
+        # Adds class to the dictionary
+        my_dict["__class__"] = self.__class__.__name__
+
+        # Makes files ISO format
         my_dict["created_at"] = self.created_at.isoformat()
         my_dict["updated_at"] = self.updated_at.isoformat()
         return my_dict
