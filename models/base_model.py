@@ -7,7 +7,7 @@ from datetime import datetime
 
 class BaseModel:
     """This class will defines all common attributes/methods
-    for other classes"""
+    for other  classes"""
 
     def __init__(self, *args, **kwargs):
         """Instantiation of base model class
