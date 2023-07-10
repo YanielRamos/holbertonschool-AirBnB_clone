@@ -12,6 +12,7 @@ from models.amenity import Amenity
 from models.city import City
 from models.place import Place
 from models.review import Review
+from models import storage
 
 
 # Creating class HBNBCommand
@@ -52,6 +53,8 @@ class HBNBCommand(cmd.Cmd):
         """
         Prints a string representation of an instance
         """
+        if not arg:
+            print("** class name missing **")
         args = arg.split()
         if len(args) == 0:
             print("** class name missing **")
