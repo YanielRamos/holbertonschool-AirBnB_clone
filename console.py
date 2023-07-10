@@ -53,6 +53,8 @@ class HBNBCommand(cmd.Cmd):
         """
         Prints a string representation of an instance
         """
+        if not arg:
+            print("** class name missing **")
         args = arg.split()
         if len(args) == 0:
             print("** class name missing **")
