@@ -56,9 +56,7 @@ class HBNBCommand(cmd.Cmd):
         if not arg:
             print("** class name missing **")
         args = arg.split()
-        if len(args) == 0:
-            print("** class name missing **")
-        elif args[0] not in self.All_Classes:
+        if args[0] not in self.All_Classes:
             print("** class doesn't exist **")
         elif len(args) == 1:
             print("** instance id missing **")
@@ -74,10 +72,10 @@ class HBNBCommand(cmd.Cmd):
         Deletes instances depending on the class
         and id
         """
+        if not arg:
+            print("** class name missing **")
         args = arg.split()
-        if len(args) == 0:
-            print("** class name is missing **")
-        elif len(args) == 1:
+        if len(args) == 1:
             print("** instance id missing **")
         elif args[0] not in self.All_Classes:
             print("** class doesn't exist **")
@@ -93,20 +91,20 @@ class HBNBCommand(cmd.Cmd):
         """
         Prints a string representation of all instances
         """
-        args = arg.split()
         if len(args) > 0 and args[0] not in self.All_Classes:
             print("** class doesn't exist **")
         else:
+            args = arg.split()
             print([str(v) for k, v in storage.all().items() if args[0] in k])
 
     def do_update(self, arg):
         """
         Updates instances based on class name and is
         """
-        args = arg.split()
-        if len(args) == 0:
+        if not arg:
             print("** class name missing **")
-        elif args[0] not in self.All_Classes:
+        args = arg.split()
+        if args[0] not in self.All_Classes:
             print("** class doesn't exist **")
         elif len(args) == 1:
             print("** instance id missing **")
