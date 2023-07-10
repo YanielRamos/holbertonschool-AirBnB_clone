@@ -5,7 +5,6 @@
 
 - [Description](#Description)
 - [Environment](#Environment)
-- [Further Information](#Furtherinformation)
 - [Requirements](#Requirements)
 - [Repo Contents](#FileContents)
 - [Installation](#Installation)
@@ -24,11 +23,11 @@
   - Style guideines: pycodestyle (version 2.7.*)
 
 
-## Requirements :memo:
-Knowledge in python3, how to use a command line interpreter, a computer with Ubuntu 20.04, python3 and pep8 style corrector.
+## **Requirements**
+* Knowledge in python3, how to use a command line interpreter, a computer with Ubuntu 20.04, python3 and pep8 style corrector.
 
-## Repo Contents :clipboard:
-This repository constains the following files:
+## **Repo Contents**
+* This repository constains the following files:
 
 |   **File**   |   **Description**   |
 | -------------- | --------------------- |
