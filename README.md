@@ -6,7 +6,7 @@
 - [Description](#Description)
 - [Environment](#Environment)
 - [Requirements](#Requirements)
-- [Repo Contents](#Repo)
+- [Contents](#Contents)
 - [Installation](#Installation)
 - [Usage](#Usage)
 - [Built with](#Built-with)
@@ -26,7 +26,7 @@
 ## **Requirements**
 * Knowledge in python3, how to use a command line interpreter, a computer with Ubuntu 20.04, python3 and pep8 style corrector.
 
-## **Repo Contents**
+## **Contents**
 * This repository constains the following files:
 
 |   **File**   |   **Description**   |
