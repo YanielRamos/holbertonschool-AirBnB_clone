@@ -55,6 +55,24 @@
 |[help](./console.py)| Prints information about specific command |
 |[quit/ EOF](./console.py)| Exit the program |
 
+### Example 
+
+#### **💻Non-Interactive mode**
+
+  -In the non-interactive mode should work like this:
+
+  $ echo "help" | ./console.py
+(hbnb)
+
+Documented commands (type help <topic>):
+```
+$ echo "help" | ./console.py
+(hbnb)
+
+Documented commands (type help <topic>):
+
+```
+
 ### **Authors**
 * Yaniel Ramos
 * Jose Alvarez
