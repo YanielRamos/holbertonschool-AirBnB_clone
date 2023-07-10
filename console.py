@@ -26,10 +26,6 @@ class HBNBCommand(cmd.Cmd):
                    "City": City, "Amenity": Amenity, "Place": Place,
                    "Review": Review}
 
-    def emptyline(self):
-        """ignores empty spaces"""
-        pass
-
     def do_quit(self, args):
         """Exit the program"""
         return True
@@ -38,7 +34,7 @@ class HBNBCommand(cmd.Cmd):
         """Exit the progaram"""
         return True
 
-    def do_create(self, arg):
+    def create(self, arg):
         """
         Creates new instances of BaseModel
         saves it and prints the ID
@@ -53,7 +49,7 @@ class HBNBCommand(cmd.Cmd):
             New_Instance.save()
             print(New_Instance.id)
 
-    def do_show(self, arg):
+    def show(self, arg):
         """
         Prints a string representation of an instance
         """
@@ -71,7 +67,7 @@ class HBNBCommand(cmd.Cmd):
             else:
                 print(storage.all()[Llave])  # Prints the Instance
 
-    def do_destroy(self, arg):
+    def destroy(self, arg):
         """
         Deletes instances depending on the class
         and id
