@@ -5,7 +5,6 @@
 
 - [Description](#Description)
 - [Environment](#Environment)
-- [Requirements](#Requirements)
 - [Contents](#Contents)
 - [Examples](#Examples)
 - [Usage](#Usage)
@@ -20,10 +19,6 @@
   - OS: Ubuntu 20.04
   - Compiler: python3 (version 3.8.5)
   - Style guideines: pycodestyle (version 2.7.*)
-
-
-## **Requirements**
-* Knowledge in python3, how to use a command line interpreter, a computer with Ubuntu 20.04, python3 and pep8 style corrector.
 
 ## **Contents**
 * This repository constains the following files:
