@@ -9,7 +9,6 @@
 - [Contents](#Contents)
 - [Installation](#Installation)
 - [Usage](#Usage)
-- [Built with](#Built-with)
 - [Authors](#Authors)
 
 ## **Description**
