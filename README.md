@@ -7,7 +7,7 @@
 - [Environment](#Environment)
 - [Requirements](#Requirements)
 - [Contents](#Contents)
-- [Installation](#Installation)
+- [Examples](#Examples)
 - [Usage](#Usage)
 - [Authors](#Authors)
 
@@ -42,7 +42,7 @@
 |[console.py](./console.py) | creates object, retrieves object from file, does operations on objects, updates attributes of object and destroys object |
 
 
-## Usage :wrench:
+## **Usage**
 
 |   **Method**   |   **Description**   |
 | -------------- | --------------------- |
@@ -55,7 +55,7 @@
 |[help](./console.py)| Prints information about specific command |
 |[quit/ EOF](./console.py)| Exit the program |
 
-### Examples
+### **Examples**
 
 #### **💻Interactive mode**
 
