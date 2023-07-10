@@ -18,10 +18,12 @@ This is the first phase of a four phase project, to create a basic clone of the 
 
 
 ## Environment :computer:
-The console was developed in Ubuntu 20.04LTS using python3 (version 3.8.5).
+The console was developed in:
+OS: Ubuntu 20.04LTS
+compiler: python3 (version 3.8.5)
+Language: Python
+Style guidenes: pycodestyle(version 2.7.*
 
-### Further information :bookmark_tabs:
-For further information on python version, and documentation visit [python.org](https://www.python.org/).
 
 ## Requirements :memo:
 Knowledge in python3, how to use a command line interpreter, a computer with Ubuntu 20.04, python3 and pep8 style corrector.
@@ -71,14 +73,6 @@ $ git clone https://github.com/------/AirBnB_clone.git
 |[help](./console.py)| Prints information about specific command |
 |[quit/ EOF](./console.py)| Exit the program |
 
-
-
-
-## Built with :gear:
-python3 (3.4.3)
-
-### Version :pushpin:
-HBnB - version 9.6
 
 ### Acknowledgements :raised_hands:
 To all the peers that contribuited with their knowledge
