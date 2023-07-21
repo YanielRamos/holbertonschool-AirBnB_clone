@@ -1,1 +1,1 @@
-This project is about creating the web page for our airbnb
+Here we're working on the HTML part of the Airbnb project.
